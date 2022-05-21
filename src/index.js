@@ -1,15 +1,12 @@
-const clockTitle = document.querySelector(".js-clock");
-const christmasEve = new Date("12/25/2022");
+const clock = document.querySelector(".clock");
 
 function getClock() {
-  const now = new Date();
-  const diffTime = Math.floor((christmasEve.getTime() - now.getTime()) / 1000);
-  const diffSecs = diffTime % 60;
-  const diffMins = Math.floor(diffTime / 60) % 60;
-  const diffHours = Math.floor(diffTime / 60 / 60) % 24;
-  const diffDays = Math.floor(diffTime / 60 / 60 / 24);
-  clockTitle.innerText = `${diffDays}d ${diffHours}h ${diffMins}m ${diffSecs}s`;
-}
-
+    const date = new Date();
+    const hours = String(date.getHours()).padStart(2, "0");
+    const minutes = String(date.getMinutes()).padStart(2, "0");
+    const seconds = String(date.getSeconds()).padStart(2, "0");
+    clock.innerText = `${hours}:${minutes}:${seconds}`;
+  }
+  
 getClock();
 setInterval(getClock, 1000);
