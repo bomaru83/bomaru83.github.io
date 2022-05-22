@@ -7,31 +7,37 @@
   </head>
   <body>
 
-    <h1 class="text-center">WHAT IS YOUR NAME?</h1>abcd
-    <form id="login-form">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="write name"
-      />
-      <input type="submit" value="Log In" />
-    </form>
-    <h1 id="greeting" class="hidden"></h1>
+    <div id="before-login" class="hidden">
+      <h1 class="text-center">WHAT IS YOUR NAME?</h1>
+      <form id="login-form">
+        <input
+          required
+          maxlength="15"
+          type="text"
+          placeholder="write name"
+        />
+        <input type="submit" value="Log In" />
+      </form>
+    </div>
 
-    <h1 class="text-center">WHAT TIME IS IT NOW?</h1>
-    <h1 class="text-center" id="clock"></h2>
+    <div id="after-login" class="hidden">
+      <h1 id="greeting"></h1>
 
-    <form id="todo-form">
-        <input type="text" placeholder="Write a To Do and Press Enter">
-    </form>
+      <h1 class="text-center">WHAT TIME IS IT NOW?</h1>
+      <h1 class="text-center" id="clock"></h2>
 
-    <ul id="todo-list">
-    </ul>
+      <form id="todo-form">
+          <input type="text" placeholder="Write a To Do and Press Enter">
+      </form>
 
-    <div id="weather">
-      <span></span>
-      <span></span>
+      <ul id="todo-list">
+      </ul>
+
+      <h1 class="text-center">YOUR LOCATION AND WHEATHER</h1>
+      <div id="weather" class="text-center">
+        <span></span>
+        <span></span>
+      </div>
     </div>
 
     <script src="src/index.js"></script>
