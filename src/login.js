@@ -13,6 +13,7 @@ function onLoginSubmit(event) {
     localStorage.setItem(USERNAME_KEY, username);
     paintGreetings(username);
     console.log("login submit", event);
+    console.log("login submit", event);
 }
 
 function paintGreetings(username) {
